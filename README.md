@@ -1,4 +1,4 @@
-# PixelArt Colors Tool
+# pxltr - a pixel art color tool
 
 A fully featured CLI tool for transforming images with retro color palettes and pixel art effects.
 
