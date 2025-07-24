@@ -5,6 +5,7 @@ description = "A fully featured CLI tool for pixel art color palette processing"
 requires-python = ">=3.12"
 dependencies = [
     "click>=8.2.1",
+    "numpy>=2.3.1",
     "pillow>=11.3.0",
     "pyyaml>=6.0.2",
     "rich>=14.0.0",

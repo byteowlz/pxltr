@@ -44,10 +44,11 @@ def cli(ctx):
 @click.option('--saturation', '-s', multiple=True, type=float, help='Adjust saturation (0.0 to infinity)')
 @click.option('--dither', '-d', type=click.Choice(['none', 'floyd', 'both']), default='none',
               help='Dithering method: none, floyd-steinberg, or both')
+@click.option('--auto-detect-pixel-size', '-a', is_flag=True, help='Automatically detect optimal pixel size from source image')
 @click.option('--verbose', '-v', is_flag=True, help='Enable verbose output')
 def process(input_path: Path, output_path: Path, width: int, palette: Tuple[str], 
            colors: Tuple[int], contrast: Tuple[float], saturation: Tuple[float], 
-           dither: str, verbose: bool):
+           dither: str, auto_detect_pixel_size: bool, verbose: bool):
     """Process images with pixel art effects
     
     INPUT_PATH: Path to image file or directory
@@ -118,7 +119,8 @@ def process(input_path: Path, output_path: Path, width: int, palette: Tuple[str]
                         list(colors) if colors else None,
                         list(saturation) if saturation else None,
                         list(contrast) if contrast else None,
-                        palette_images if palette_images else None
+                        palette_images if palette_images else None,
+                        auto_detect_pixel_size
                     )
                     progress.advance(task)
             
@@ -139,7 +141,8 @@ def process(input_path: Path, output_path: Path, width: int, palette: Tuple[str]
                     list(colors) if colors else None,
                     list(saturation) if saturation else None,
                     list(contrast) if contrast else None,
-                    palette_images if palette_images else None
+                    palette_images if palette_images else None,
+                    auto_detect_pixel_size
                 )
                 progress.advance(task)
             
@@ -212,6 +215,33 @@ def show_palette(palette_name: str, output: Optional[Path]):
             console.print(f"\n[green]✓[/green] Palette saved to: {output}")
         except Exception as e:
             console.print(f"[red]Error saving palette:[/red] {str(e)}")
+
+@cli.command()
+@click.argument('input_path', type=click.Path(exists=True, path_type=Path))
+def detect_pixel_size(input_path: Path):
+    """Detect the optimal pixel size for an image
+    
+    INPUT_PATH: Path to the image file
+    """
+    try:
+        from palette_swap import detect_pixel_size as detect_func
+        from PIL import Image
+        
+        # Load image
+        img = Image.open(input_path).convert('RGB')
+        detected_size = detect_func(img)
+        
+        console.print(f"\n[bold]Pixel Size Detection[/bold] for {input_path.name}")
+        console.print(f"Detected pixel size: [green]{detected_size}x{detected_size}[/green]")
+        
+        if detected_size > 1:
+            console.print(f"Recommended width resolution: [cyan]{img.width // detected_size}[/cyan]")
+        else:
+            console.print("[yellow]No clear pixel pattern detected - image may not be pixelated[/yellow]")
+    
+    except Exception as e:
+        console.print(f"[red]Error:[/red] {str(e)}")
+        sys.exit(1)
 
 @cli.command()
 @click.argument('input_path', type=click.Path(exists=True, path_type=Path))

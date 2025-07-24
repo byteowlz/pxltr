@@ -1,0 +1,15 @@
+# env file 
+.env .DS_Store
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/ *.egg-info
+# python virtual environment folder
+.venv/
+.vscode/
+*.webp
+*.png
+*.jpg
+*.jpeg
