@@ -1,0 +1,14 @@
+name: "gameboy"
+description: "Original Game Boy DMG-01 4-color green palette"
+source: "Game Boy Color Bootstrap ROM documentation"
+color_count: 4
+colors:
+  - [15, 56, 15]    # Darkest green (black)
+  - [48, 98, 48]    # Dark green
+  - [139, 172, 15]  # Light green
+  - [155, 188, 15]  # Lightest green (white)
+
+notes:
+  - "Original Game Boy used a monochrome LCD with green tint"
+  - "Colors may vary slightly between different Game Boy models"
+  - "This represents the classic DMG-01 'brick' Game Boy palette"

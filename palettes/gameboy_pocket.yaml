@@ -1,0 +1,14 @@
+name: "gameboy_pocket"
+description: "Game Boy Pocket improved 4-color palette"
+source: "Game Boy Pocket hardware specifications"
+color_count: 4
+colors:
+  - [8, 24, 32]     # Darkest (black)
+  - [52, 104, 86]   # Dark
+  - [136, 192, 112] # Light
+  - [224, 248, 208] # Lightest (white)
+
+notes:
+  - "Game Boy Pocket had improved LCD with better contrast"
+  - "Less green tint compared to original Game Boy"
+  - "Released in 1996 as a smaller, lighter Game Boy variant"

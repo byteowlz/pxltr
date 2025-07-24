@@ -1,0 +1,27 @@
+name: "cga"
+description: "IBM CGA 16-color RGBI palette"
+source: "IBM Color Graphics Adapter documentation"
+color_count: 16
+colors:
+  - [0, 0, 0]       # Black
+  - [0, 0, 170]     # Blue
+  - [0, 170, 0]     # Green
+  - [0, 170, 170]   # Cyan
+  - [170, 0, 0]     # Red
+  - [170, 0, 170]   # Magenta
+  - [170, 85, 0]    # Brown (dark yellow)
+  - [170, 170, 170] # Light grey
+  - [85, 85, 85]    # Dark grey
+  - [85, 85, 255]   # Light blue
+  - [85, 255, 85]   # Light green
+  - [85, 255, 255]  # Light cyan
+  - [255, 85, 85]   # Light red
+  - [255, 85, 255]  # Light magenta
+  - [255, 255, 85]  # Yellow
+  - [255, 255, 255] # White
+
+notes:
+  - "IBM Color Graphics Adapter 4-bit RGBI color scheme"
+  - "Brown color is distinctive feature of CGA palette"
+  - "Used in early IBM PC compatibles"
+  - "Intensity bit affects RGB channels differently"

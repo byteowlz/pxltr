@@ -1,0 +1,28 @@
+name: "zx_spectrum"
+description: "ZX Spectrum 16-color RGBI palette"
+source: "ZX Spectrum technical documentation"
+color_count: 16
+colors:
+  - [0, 0, 0]       # Black
+  - [0, 0, 215]     # Blue
+  - [215, 0, 0]     # Red
+  - [215, 0, 215]   # Magenta
+  - [0, 215, 0]     # Green
+  - [0, 215, 215]   # Cyan
+  - [215, 215, 0]   # Yellow
+  - [215, 215, 215] # White
+  - [0, 0, 0]       # Bright black (same as black)
+  - [0, 0, 255]     # Bright blue
+  - [255, 0, 0]     # Bright red
+  - [255, 0, 255]   # Bright magenta
+  - [0, 255, 0]     # Bright green
+  - [0, 255, 255]   # Bright cyan
+  - [255, 255, 0]   # Bright yellow
+  - [255, 255, 255] # Bright white
+
+notes:
+  - "ZX Spectrum 4-bit RGBI color system"
+  - "8 basic colors plus 8 bright variants"
+  - "Bright black is identical to normal black"
+  - "Used in Sinclair ZX Spectrum computers"
+  - "Simple but effective color palette for 8-bit era"

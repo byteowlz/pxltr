@@ -1,0 +1,48 @@
+name: "amiga"
+description: "Amiga OCS/ECS 32-color palette"
+source: "Amiga OCS/ECS chipset documentation"
+color_count: 32
+colors:
+  # Basic 16 colors (similar to CGA/EGA)
+  - [0, 0, 0]       # Black
+  - [0, 0, 136]     # Dark blue
+  - [0, 136, 0]     # Dark green
+  - [0, 136, 136]   # Dark cyan
+  - [136, 0, 0]     # Dark red
+  - [136, 0, 136]   # Dark magenta
+  - [136, 68, 0]    # Brown
+  - [136, 136, 136] # Light grey
+  - [68, 68, 68]    # Dark grey
+  - [68, 68, 255]   # Light blue
+  - [68, 255, 68]   # Light green
+  - [68, 255, 255]  # Light cyan
+  - [255, 68, 68]   # Light red
+  - [255, 68, 255]  # Light magenta
+  - [255, 255, 68]  # Yellow
+  - [255, 255, 255] # White
+  
+  # Additional 16 colors for extended palette
+  - [20, 20, 20]    # Very dark grey
+  - [32, 32, 32]    # Dark grey 2
+  - [44, 44, 44]    # Dark grey 3
+  - [56, 56, 56]    # Dark grey 4
+  - [80, 80, 80]    # Medium grey 1
+  - [96, 96, 96]    # Medium grey 2
+  - [112, 112, 112] # Medium grey 3
+  - [128, 128, 128] # Medium grey 4
+  - [144, 144, 144] # Light grey 1
+  - [160, 160, 160] # Light grey 2
+  - [180, 180, 180] # Light grey 3
+  - [200, 200, 200] # Light grey 4
+  - [224, 224, 224] # Very light grey 1
+  - [240, 240, 240] # Very light grey 2
+  - [248, 248, 248] # Very light grey 3
+  - [252, 252, 252] # Very light grey 4
+
+notes:
+  - "Amiga OCS/ECS could display up to 32 colors simultaneously"
+  - "Full system supported 4096 colors in HAM mode"
+  - "This represents a typical 32-color palette"
+  - "Colors could be freely chosen from 4096 color space"
+  - "Palette shown includes common grayscale ramp"
+  - "Used in Amiga 500, 1000, 2000 computers"

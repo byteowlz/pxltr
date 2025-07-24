@@ -1,0 +1,25 @@
+[project]
+name = "pixelartcolorstool"
+version = "1.0.0"
+description = "A fully featured CLI tool for pixel art color palette processing"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.2.1",
+    "pillow>=11.3.0",
+    "pyyaml>=6.0.2",
+    "rich>=14.0.0",
+]
+
+[project.scripts]
+pixelart-colors = "cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pixelartcolorstool"
+Repository = "https://github.com/yourusername/pixelartcolorstool"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

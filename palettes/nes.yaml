@@ -1,0 +1,83 @@
+name: "nes"
+description: "Nintendo Entertainment System 2C02 PPU 64-color palette"
+source: "NESdev Wiki - Official 2C02 PPU specifications"
+url: "https://www.nesdev.org/wiki/PPU_palettes"
+color_count: 64
+colors:
+  # Row 0x0X
+  - [84, 84, 84]    # $00 - Dark gray
+  - [0, 30, 116]    # $01 - Dark blue
+  - [8, 16, 144]    # $02 - Blue
+  - [48, 0, 136]    # $03 - Dark violet
+  - [68, 0, 100]    # $04 - Dark magenta
+  - [92, 0, 48]     # $05 - Dark red
+  - [84, 4, 0]      # $06 - Dark orange
+  - [60, 24, 0]     # $07 - Brown
+  - [32, 42, 0]     # $08 - Dark yellow
+  - [8, 58, 0]      # $09 - Dark green
+  - [0, 64, 0]      # $0A - Green
+  - [0, 60, 0]      # $0B - Dark cyan
+  - [0, 50, 60]     # $0C - Cyan
+  - [0, 0, 0]       # $0D - Black (avoid using - "blacker than black")
+  - [0, 0, 0]       # $0E - Black
+  - [0, 0, 0]       # $0F - Black
+  
+  # Row 0x1X
+  - [152, 150, 152] # $10 - Light gray
+  - [8, 76, 196]    # $11 - Blue
+  - [48, 50, 236]   # $12 - Light blue
+  - [92, 30, 228]   # $13 - Violet
+  - [136, 20, 176]  # $14 - Magenta
+  - [160, 20, 100]  # $15 - Rose
+  - [152, 34, 32]   # $16 - Red
+  - [120, 60, 0]    # $17 - Orange
+  - [84, 90, 0]     # $18 - Yellow
+  - [40, 114, 0]    # $19 - Chartreuse
+  - [8, 124, 0]     # $1A - Light green
+  - [0, 118, 40]    # $1B - Spring green
+  - [0, 102, 120]   # $1C - Light cyan
+  - [0, 0, 0]       # $1D - Black
+  - [0, 0, 0]       # $1E - Black
+  - [0, 0, 0]       # $1F - Black
+  
+  # Row 0x2X
+  - [236, 238, 236] # $20 - White
+  - [76, 154, 236]  # $21 - Light blue
+  - [120, 124, 236] # $22 - Light violet
+  - [176, 98, 236]  # $23 - Light magenta
+  - [228, 84, 236]  # $24 - Pink
+  - [236, 88, 180]  # $25 - Light rose
+  - [236, 106, 100] # $26 - Light red
+  - [212, 136, 32]  # $27 - Light orange
+  - [160, 170, 0]   # $28 - Light yellow
+  - [116, 196, 0]   # $29 - Light chartreuse
+  - [76, 208, 32]   # $2A - Lime
+  - [56, 204, 108]  # $2B - Light spring
+  - [56, 180, 204]  # $2C - Aqua
+  - [60, 60, 60]    # $2D - Dark gray
+  - [0, 0, 0]       # $2E - Black
+  - [0, 0, 0]       # $2F - Black
+  
+  # Row 0x3X
+  - [236, 238, 236] # $30 - White
+  - [168, 204, 236] # $31 - Pale blue
+  - [188, 188, 236] # $32 - Pale violet
+  - [212, 178, 236] # $33 - Pale magenta
+  - [236, 174, 236] # $34 - Pale pink
+  - [236, 174, 212] # $35 - Pale rose
+  - [236, 180, 176] # $36 - Pale red
+  - [228, 196, 144] # $37 - Pale orange
+  - [204, 210, 120] # $38 - Pale yellow
+  - [180, 222, 120] # $39 - Pale chartreuse
+  - [168, 226, 144] # $3A - Pale green
+  - [152, 226, 180] # $3B - Pale spring
+  - [160, 214, 228] # $3C - Pale cyan
+  - [160, 162, 160] # $3D - Light gray
+  - [0, 0, 0]       # $3E - Black
+  - [0, 0, 0]       # $3F - Black
+
+notes:
+  - "Color $0D should be avoided as it produces 'blacker than black' signal"
+  - "Colors $0E-$0F, $1E-$1F, $2E-$2F, $3E-$3F are all black"
+  - "This palette represents the 2C02 NTSC PPU used in most home NES consoles"
+  - "Values generated using Pally v0.22.1 with composite video simulation"

@@ -1,0 +1,28 @@
+name: "commodore64"
+description: "Commodore 64 VIC-II 16-color palette"
+source: "C64-Wiki and VICE emulator project"
+url: "https://www.c64-wiki.com/wiki/Color"
+color_count: 16
+colors:
+  - [0, 0, 0]       # Black
+  - [255, 255, 255] # White
+  - [136, 57, 50]   # Red
+  - [103, 182, 189] # Cyan
+  - [139, 63, 150]  # Purple
+  - [85, 160, 73]   # Green
+  - [64, 49, 141]   # Blue
+  - [191, 206, 114] # Yellow
+  - [139, 84, 41]   # Orange
+  - [87, 66, 0]     # Brown
+  - [184, 105, 98]  # Light red
+  - [80, 80, 80]    # Dark grey
+  - [120, 120, 120] # Medium grey
+  - [148, 224, 137] # Light green
+  - [120, 105, 196] # Light blue
+  - [159, 159, 159] # Light grey
+
+notes:
+  - "VIC-II video chip used in Commodore 64"
+  - "Colors based on YPbPr composite video output"
+  - "Palette may vary slightly on different displays"
+  - "One of the most iconic 8-bit computer palettes"

@@ -1,0 +1,168 @@
+name: "atari2600"
+description: "Atari 2600 TIA color palette subset"
+source: "Atari 2600 TIA chip documentation"
+color_count: 128
+colors:
+  # Grayscale
+  - [0, 0, 0]       # Black
+  - [64, 64, 64]    # Dark grey
+  - [108, 108, 108] # Medium grey
+  - [144, 144, 144] # Light grey
+  - [200, 200, 200] # Very light grey
+  - [255, 255, 255] # White
+  
+  # Red hues
+  - [136, 0, 0]     # Dark red
+  - [175, 0, 0]     # Medium red
+  - [215, 0, 0]     # Red
+  - [255, 0, 0]     # Bright red
+  
+  # Orange hues
+  - [136, 68, 0]    # Dark orange
+  - [175, 87, 0]    # Medium orange
+  - [215, 107, 0]   # Orange
+  - [255, 127, 0]   # Bright orange
+  
+  # Yellow hues
+  - [136, 136, 0]   # Dark yellow
+  - [175, 175, 0]   # Medium yellow
+  - [215, 215, 0]   # Yellow
+  - [255, 255, 0]   # Bright yellow
+  
+  # Green hues
+  - [68, 136, 0]    # Dark yellow-green
+  - [87, 175, 0]    # Medium yellow-green
+  - [107, 215, 0]   # Yellow-green
+  - [127, 255, 0]   # Bright yellow-green
+  
+  - [0, 136, 0]     # Dark green
+  - [0, 175, 0]     # Medium green
+  - [0, 215, 0]     # Green
+  - [0, 255, 0]     # Bright green
+  
+  - [0, 136, 68]    # Dark blue-green
+  - [0, 175, 87]    # Medium blue-green
+  - [0, 215, 107]   # Blue-green
+  - [0, 255, 127]   # Bright blue-green
+  
+  # Cyan hues
+  - [0, 136, 136]   # Dark cyan
+  - [0, 175, 175]   # Medium cyan
+  - [0, 215, 215]   # Cyan
+  - [0, 255, 255]   # Bright cyan
+  
+  - [0, 68, 136]    # Dark blue-cyan
+  - [0, 87, 175]    # Medium blue-cyan
+  - [0, 107, 215]   # Blue-cyan
+  - [0, 127, 255]   # Bright blue-cyan
+  
+  # Blue hues
+  - [0, 0, 136]     # Dark blue
+  - [0, 0, 175]     # Medium blue
+  - [0, 0, 215]     # Blue
+  - [0, 0, 255]     # Bright blue
+  
+  - [68, 0, 136]    # Dark purple-blue
+  - [87, 0, 175]    # Medium purple-blue
+  - [107, 0, 215]   # Purple-blue
+  - [127, 0, 255]   # Bright purple-blue
+  
+  # Purple hues
+  - [136, 0, 136]   # Dark purple
+  - [175, 0, 175]   # Medium purple
+  - [215, 0, 215]   # Purple
+  - [255, 0, 255]   # Bright purple
+  
+  - [136, 0, 68]    # Dark red-purple
+  - [175, 0, 87]    # Medium red-purple
+  - [215, 0, 107]   # Red-purple
+  - [255, 0, 127]   # Bright red-purple
+  
+  # Additional colors to reach 128 total
+  - [32, 32, 32]    # Very dark grey
+  - [96, 96, 96]    # Dark-medium grey
+  - [128, 128, 128] # Medium grey
+  - [160, 160, 160] # Medium-light grey
+  - [192, 192, 192] # Light grey
+  - [224, 224, 224] # Very light grey
+  
+  # More color variations
+  - [68, 34, 0]     # Dark brown
+  - [102, 51, 0]    # Brown
+  - [136, 68, 34]   # Light brown
+  - [170, 85, 68]   # Tan
+  
+  - [34, 68, 34]    # Dark olive
+  - [51, 102, 51]   # Olive
+  - [68, 136, 68]   # Light olive
+  - [85, 170, 85]   # Pale green
+  
+  - [34, 34, 68]    # Dark navy
+  - [51, 51, 102]   # Navy
+  - [68, 68, 136]   # Light navy
+  - [85, 85, 170]   # Pale blue
+  
+  - [68, 34, 68]    # Dark plum
+  - [102, 51, 102]  # Plum
+  - [136, 68, 136]  # Light plum
+  - [170, 85, 170]  # Pale purple
+  
+  # Fill remaining slots with variations
+  - [255, 128, 128] # Light red
+  - [255, 192, 128] # Light orange
+  - [255, 255, 128] # Light yellow
+  - [192, 255, 128] # Light lime
+  - [128, 255, 128] # Light green
+  - [128, 255, 192] # Light mint
+  - [128, 255, 255] # Light cyan
+  - [128, 192, 255] # Light sky
+  - [128, 128, 255] # Light blue
+  - [192, 128, 255] # Light violet
+  - [255, 128, 255] # Light magenta
+  - [255, 128, 192] # Light pink
+  
+  - [128, 64, 64]   # Dark rose
+  - [128, 96, 64]   # Dark tan
+  - [128, 128, 64]  # Dark lime
+  - [96, 128, 64]   # Dark sage
+  - [64, 128, 64]   # Dark forest
+  - [64, 128, 96]   # Dark teal
+  - [64, 128, 128]  # Dark aqua
+  - [64, 96, 128]   # Dark steel
+  - [64, 64, 128]   # Dark indigo
+  - [96, 64, 128]   # Dark violet
+  - [128, 64, 128]  # Dark magenta
+  - [128, 64, 96]   # Dark mauve
+  
+  - [192, 96, 96]   # Dusty rose
+  - [192, 144, 96]  # Dusty tan
+  - [192, 192, 96]  # Dusty lime
+  - [144, 192, 96]  # Dusty sage
+  - [96, 192, 96]   # Dusty green
+  - [96, 192, 144]  # Dusty mint
+  - [96, 192, 192]  # Dusty aqua
+  - [96, 144, 192]  # Dusty steel
+  - [96, 96, 192]   # Dusty blue
+  - [144, 96, 192]  # Dusty violet
+  - [192, 96, 192]  # Dusty magenta
+  - [192, 96, 144]  # Dusty mauve
+  
+  - [160, 80, 80]   # Muted red
+  - [160, 120, 80]  # Muted orange
+  - [160, 160, 80]  # Muted yellow
+  - [120, 160, 80]  # Muted lime
+  - [80, 160, 80]   # Muted green
+  - [80, 160, 120]  # Muted mint
+  - [80, 160, 160]  # Muted cyan
+  - [80, 120, 160]  # Muted blue
+  - [80, 80, 160]   # Muted indigo
+  - [120, 80, 160]  # Muted violet
+  - [160, 80, 160]  # Muted magenta
+  - [160, 80, 120]  # Muted rose
+
+notes:
+  - "Atari 2600 TIA chip could display 128 colors"
+  - "Only a subset shown here - full palette is much larger"
+  - "Colors based on NTSC composite video output"
+  - "Actual colors varied significantly on different TVs"
+  - "This is a representative sampling of available colors"

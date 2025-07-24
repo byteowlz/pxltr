@@ -1,0 +1,28 @@
+name: "apple2"
+description: "Apple II hi-res 16-color palette"
+source: "Apple II Reference Manual and YIQ color space analysis"
+color_count: 16
+colors:
+  - [0, 0, 0]       # Black
+  - [114, 38, 64]   # Dark red
+  - [64, 51, 127]   # Dark blue
+  - [228, 52, 254]  # Magenta
+  - [14, 89, 64]    # Dark green
+  - [128, 128, 128] # Grey
+  - [27, 154, 254]  # Light blue
+  - [191, 179, 255] # Light magenta
+  - [64, 76, 0]     # Brown
+  - [228, 101, 1]   # Orange
+  - [128, 128, 128] # Grey (duplicate)
+  - [255, 129, 236] # Pink
+  - [27, 203, 1]    # Green
+  - [191, 204, 128] # Light green
+  - [141, 217, 191] # Aqua
+  - [255, 255, 255] # White
+
+notes:
+  - "Apple II used YIQ color space with NTSC artifacts"
+  - "Colors varied significantly between different monitors"
+  - "This represents hi-res mode colors"
+  - "Lo-res mode had different color mapping"
+  - "Artifact colors created by NTSC composite video"

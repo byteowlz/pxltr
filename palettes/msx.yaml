@@ -1,0 +1,27 @@
+name: "msx"
+description: "MSX computer TMS9918 VDP 16-color palette"
+source: "Texas Instruments TMS9918 documentation"
+color_count: 16
+colors:
+  - [0, 0, 0]       # Transparent (black)
+  - [0, 0, 0]       # Black
+  - [33, 200, 66]   # Medium green
+  - [94, 220, 120]  # Light green
+  - [84, 85, 237]   # Dark blue
+  - [125, 118, 252] # Light blue
+  - [212, 82, 77]   # Dark red
+  - [66, 235, 245]  # Cyan
+  - [252, 85, 84]   # Medium red
+  - [255, 121, 120] # Light red
+  - [212, 193, 84]  # Dark yellow
+  - [230, 206, 128] # Light yellow
+  - [33, 176, 59]   # Dark green
+  - [201, 91, 186]  # Magenta
+  - [204, 204, 204] # Grey
+  - [255, 255, 255] # White
+
+notes:
+  - "Texas Instruments TMS9918 Video Display Processor"
+  - "Used in MSX computers and other systems"
+  - "Colors derived from YUV composite video"
+  - "Color 0 is transparent in sprite mode"
