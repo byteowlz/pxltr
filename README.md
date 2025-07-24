@@ -7,15 +7,7 @@ A fully featured CLI tool for transforming images with retro color palettes and 
 Install using uv (recommended):
 
 ```bash
-uv add pixelartcolorstool
-```
-
-Or install from source:
-
-```bash
-git clone <repository-url>
-cd PixelArtColorsTool
-uv install -e .
+uv sync 
 ```
 
 ## Usage
@@ -27,7 +19,7 @@ The tool provides several commands for different operations:
 Transform images with pixel art effects:
 
 ```bash
-pixelart-colors process input.png output.png [OPTIONS]
+cli process input.png output.png [OPTIONS]
 ```
 
 **Options:**
@@ -44,10 +36,10 @@ pixelart-colors process input.png output.png [OPTIONS]
 
 ```bash
 # Basic usage with built-in palette
-pixelart-colors process input.png output.png --palette gameboy
+cli process input.png output.png --palette gameboy
 
 # Multiple effects and settings
-pixelart-colors process input.png output.png \
+cli process input.png output.png \
   --palette nes \
   --width 128 \
   --contrast 1.2 \
@@ -55,10 +47,10 @@ pixelart-colors process input.png output.png \
   --dither floyd
 
 # Process entire directory
-pixelart-colors process input_dir/ output_dir/ --palette pico8
+cli process input_dir/ output_dir/ --palette pico8
 
 # Multiple palettes and color counts
-pixelart-colors process input.png output.png \
+cli process input.png output.png \
   --palette gameboy nes \
   --colors 8 16 \
   --contrast 1.0 1.2
@@ -69,7 +61,7 @@ pixelart-colors process input.png output.png \
 View all built-in color palettes:
 
 ```bash
-pixelart-colors palettes
+cli palettes
 ```
 
 ### Show Palette Details
@@ -77,8 +69,8 @@ pixelart-colors palettes
 Display colors in a specific palette:
 
 ```bash
-pixelart-colors show-palette gameboy
-pixelart-colors show-palette nes --output nes_palette.png
+cli show-palette gameboy
+cli show-palette nes --output nes_palette.png
 ```
 
 ### Extract Palette from Image
@@ -86,8 +78,8 @@ pixelart-colors show-palette nes --output nes_palette.png
 Extract a color palette from an existing image:
 
 ```bash
-pixelart-colors extract-palette input.png --colors 16
-pixelart-colors extract-palette input.png --colors 8 --output extracted_palette.png
+cli extract-palette input.png --colors 16
+cli extract-palette input.png --colors 8 --output extracted_palette.png
 ```
 
 ## Built-in Color Palettes
@@ -127,7 +119,7 @@ When you specify multiple values for parameters, the tool generates all combinat
 
 ```bash
 # This creates 4 output variations (2 contrasts × 2 saturations)
-pixelart-colors process input.png output.png \
+cli process input.png output.png \
   --contrast 1.0 1.2 \
   --saturation 0.8 1.0
 ```
@@ -137,7 +129,7 @@ pixelart-colors process input.png output.png \
 You can use custom palette images (1-pixel tall images with your desired colors):
 
 ```bash
-pixelart-colors process input.png output.png --palette custom_palette.png
+cli process input.png output.png --palette custom_palette.png
 ```
 
 ### Directory Processing
@@ -145,29 +137,9 @@ pixelart-colors process input.png output.png --palette custom_palette.png
 Process all images in a directory:
 
 ```bash
-pixelart-colors process images/ processed_images/ --palette gameboy --verbose
+cli process images/ processed_images/ --palette gameboy --verbose
 ```
 
-## Legacy Interface
+## Attribution
 
-The original script interface is still available:
-
-```bash
-uv run palette_swap.py input.png output.png --palette gameboy
-```
-
-## Development
-
-To contribute or modify the tool:
-
-```bash
-git clone <repository-url>
-cd PixelArtColorsTool
-uv install -e .
-```
-
-Run tests:
-
-```bash
-uv run python -m pytest
-```
+Adapted from [PixelArtColorsTool](https://github.com/Mardjak/PixelArtColorsTool)
